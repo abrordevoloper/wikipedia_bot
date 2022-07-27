@@ -12,7 +12,7 @@ async def welcome(message: types.Message):
 async def echo(message: types.Message):
 
     try:
-        respond = wikipedia.summary(message.text)
+        respond = wikipedia.summary(message.text.lower())
         await message.reply(respond)
     except:
 
